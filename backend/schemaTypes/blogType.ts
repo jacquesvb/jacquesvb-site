@@ -16,6 +16,12 @@ export const blogType = defineType({
      }),
     defineField({ name: 'titleImage', type: 'image', title: 'Title Image' }),
     defineField({ name: 'smallDescription', type: 'text', title: 'Small Description' }),
-    defineField({ name: 'content', type: 'array', title: 'Content', of: [{ type: 'block' }] })
+    defineField({ name: 'content', type: 'array', title: 'Content', of: [{ type: 'block' }] }),
+    defineField({
+      name: 'tags',
+      type: 'array',
+      title: 'Tags',
+      of: [{ type: 'reference', to: [{ type: 'tag' }] }]
+    })
   ]
 })
