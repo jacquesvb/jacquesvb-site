@@ -3,7 +3,7 @@ import { fullBlog } from "@/lib/interface";
 import { client, urlFor } from "@/lib/sanity";
 import { PortableText } from "next-sanity";
 
-export const revalidate = 30;
+export const revalidate = 30; // revalidate every 30 seconds
 
 async function getData(slug: string) {
   const query = `
