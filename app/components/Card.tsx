@@ -12,7 +12,7 @@ interface cardProps {
 
 export default function Card(props: cardProps) {
   return (
-    <div className="card w=96 bg-base-100 shadow-xl">
+    <div className="card bg-gray-300 dark:bg-gray-800 w=96 shadow-xl">
       <figure><Image src={props.cardImage} alt={props.cardImageAlt} width={500} height={500} /></figure>
       <div className="card-body">
         <h2 className="card-title">{props.cardTitle}</h2>

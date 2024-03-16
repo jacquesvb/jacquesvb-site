@@ -5,7 +5,7 @@ import NavButton from "@/components/Navbar/NavButton";
 
 export default function Navbar() {
   return (
-    <nav className="w-full relative flex items-center justify-between max-w-2xl mx-auto px-4 pt-5 pb-3 border-4 rounded bg-green-200">
+    <nav className="w-full relative flex items-center justify-between max-w-2xl mx-auto px-4 pt-5 pb-3 rounded bg-green-200">
       <NavButton
         icon={<Home />}
         linkUrl="/"
