@@ -1,10 +1,24 @@
+import Image from 'next/image';
+import { Card, CardContent } from '@/components/ui/card';
+
 export default function Page() {
   return (
-    <div>
-      <h1>About Me</h1>
-      <p>
-        I am a web developer and I love to build websites. I am a self-taught developer and I have been working in this field for the past 2 years. I am passionate about building websites and I love to learn new things.
-      </p>
+    <div className="container m-auto grid grid-cols-3 gap-4 bg-gray-200 dark:bg-gray-800 p-5 mt-5 rounded-lg relative">
+      <Card className="col-span-1 p-3 border-solid border-2 border-green-800 bg-slate-400 h-[200px] relative">
+        <Image 
+          src="/Jacques.png"
+          alt="Me"
+          fill
+          objectFit="contain"
+          className="p-3"
+        />
+      </Card>
+      <div className="col-span-2 border-solid border-2 border-green-800 rounded-lg h-[200px]">
+        <h3>Some stuff about me</h3>
+      </div>
+      <div className="col-span-3 border-solid border-2 border-green-800 rounded-lg h-[100px]">
+        <h3>Links to stuff</h3>
+      </div>
     </div>
   )
 }
