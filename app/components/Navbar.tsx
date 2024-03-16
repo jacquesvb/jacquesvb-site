@@ -24,7 +24,7 @@ export default function Navbar() {
         </Tooltip>
         <Tooltip>
           <TooltipTrigger>
-            <Link href="/blog">
+            <Link href="/about">
               <div className="h-[2.2rem] w-[2.2rem] bg-white dark:bg-black hover:bg-gray-200 rounded p-[.6rem]">
                 <TooltipContent>About Me</TooltipContent>
                 <UserRound className="h-[1rem] w-[1rem] dark:bg-black rounded" />
