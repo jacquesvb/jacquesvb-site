@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import Navbar from "@/components/Navbar";
+import Navbar from "@/components/Navbar/Navbar";
 import { Inter } from "next/font/google";
 import Providers from "@/providers";
 import "./globals.css";
@@ -18,7 +18,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body className="bg-blue-400 dark:bg-black ${inter.className}">
         <Providers
           attribute="class"
           defaultTheme="system"

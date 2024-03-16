@@ -1,0 +1,28 @@
+import Image from 'next/image';
+import Link from 'next/link';
+
+interface cardProps {
+  cardImage: string;
+  cardImageAlt: string;
+  cardTitle: string;
+  cardDescription: string;
+  buttonLabel: string;
+  buttonLink: string;
+}
+
+export default function Card(props: cardProps) {
+  return (
+    <div className="card w=96 bg-base-100 shadow-xl">
+      <figure><Image src={props.cardImage} alt={props.cardImageAlt} width={500} height={500} /></figure>
+      <div className="card-body">
+        <h2 className="card-title">{props.cardTitle}</h2>
+        <p>{props.cardDescription}</p>
+        <div className="card-actions justify-center">
+          <button className="btn btn-primary">
+            <Link href={props.buttonLink}>{props.buttonLabel}</Link>
+          </button>
+        </div>
+      </div>
+    </div>
+  )
+}
