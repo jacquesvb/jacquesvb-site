@@ -18,7 +18,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className="bg-blue-400 dark:bg-black ${inter.className} h-[600px] md:h-[800px]">
+      <body className="bg-blue-400 dark:bg-black ${inter.className} h-full">
         <Providers
           attribute="class"
           defaultTheme="system"

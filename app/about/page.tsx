@@ -23,7 +23,7 @@ export default async function Page() {
   const data: aboutMe[] = await getData();
   console.log("Data: ", data[0].resume);
   return (
-    <div className="h-screen">
+    <div className="min-h-[600px]">
       <div className="container m-auto grid md:grid-cols-3 md:grid-rows-3 gap-4 bg-gray-200 dark:bg-gray-800 p-5 mt-5 rounded-lg relative md:h-96">
       <div className="col-span-1 row-start-1 border-solid border-2 border-green-800 bg-slate-400 h-[200px] relative">
         <Image

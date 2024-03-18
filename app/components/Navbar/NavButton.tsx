@@ -8,7 +8,7 @@ interface NavButtonProps {
 
 export default function NavButton( props: NavButtonProps ) {
   return (
-    <div>
+    <div className="text-center">
       <button className="btn btn-square">
         <Link href={props.linkUrl}>
           {props.icon}

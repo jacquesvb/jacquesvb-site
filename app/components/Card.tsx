@@ -1,5 +1,5 @@
-import Image from 'next/image';
-import Link from 'next/link';
+import Image from "next/image";
+import Link from "next/link";
 
 interface cardProps {
   cardImage: string;
@@ -8,24 +8,28 @@ interface cardProps {
   cardDescription: string;
   buttonLabel: string;
   buttonLink: string;
-  backgroundColor: string;
 }
 
 export default function Card(props: cardProps) {
   return (
-    <div className={`p-5 ${props.backgroundColor} rounded-lg`}>
-      <div className="card bg-gray-300 dark:bg-gray-800 w=96 shadow-xl">
-        <figure><Image src={props.cardImage} alt={props.cardImageAlt} width={500} height={500} /></figure>
-        <div className="card-body">
-        <h2 className="card-title">{props.cardTitle}</h2>
-        <p>{props.cardDescription}</p>
-          <div className="card-actions justify-center">
-            <button className="btn btn-primary">
-              <Link href={props.buttonLink}>{props.buttonLabel}</Link>
-            </button>
-         </div>
+    <div className="card flex bg-gray-300 dark:bg-gray-800 w=96 shadow-xl">
+      <div className="col-span-1 row-start-1 h-[200px] relative">
+        <Image
+          src={props.cardImage}
+          alt={props.cardImageAlt}
+          fill
+          className="absolute object-cover top-0 left-0 w-full h-full rounded-lg"
+        />
+      </div>
+      <div className="flex flex-col card-body p-2">
+        <div className="text-lg font-medium text-center text-ellipsis">{props.cardTitle}</div>
+        <div>{props.cardDescription}</div>
+        <div className="mt-auto card-actions justify-center">
+          <button className="btn btn-primary">
+            <Link href={props.buttonLink}>{props.buttonLabel}</Link>
+          </button>
         </div>
       </div>
     </div>
-  )
+  );
 }
