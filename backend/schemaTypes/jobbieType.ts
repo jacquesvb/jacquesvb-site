@@ -9,7 +9,7 @@ export const jobbieType = defineType({
     defineField({ name: 'slug', type: 'slug', title: 'Slug of your jobbie', options: { source: 'name' } }),
     defineField({ name: 'jobbieImage', type: 'image', title: 'Jobbie Image' }),
     defineField({ name: 'jobbieDescription', type: 'text', title: 'Jobbie Description' }),
-    defineField({ name: 'resume', type: 'file', title: 'Resume' }),
+    defineField({ name: 'resume', type: 'url', title: 'Resume' }),
     defineField({ name: 'github', type: 'url', title: 'Github' }),
     defineField({ name: 'linkedin', type: 'url', title: 'Linkedin' })
   ]

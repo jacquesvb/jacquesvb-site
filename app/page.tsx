@@ -4,6 +4,7 @@ import { client, urlFor } from '@/lib/sanity';
 import { simpleBlogCard } from '@/lib/interface';
 import Card from '@/components/Card';
 import Hero from '@/components/Hero';
+import { CardType } from './util/globalSettings';
 
 export const revalidate = 30; // revalidate every 30 seconds
 
@@ -23,7 +24,7 @@ async function getData() {
 
 export default async function Home() {
   const data: simpleBlogCard[] = await getData();
-
+  
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 mt-5 gap-5">
       <Hero />
@@ -35,6 +36,7 @@ export default async function Home() {
           cardDescription={post.smallDescription}
           buttonLabel="Read More"
           buttonLink={`/blog/${post.currentSlug}`}
+          backgroundColor={CardType.retro}
         />
       ))}
     </div>

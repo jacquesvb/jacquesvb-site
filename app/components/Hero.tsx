@@ -9,7 +9,7 @@ export default function Hero() {
         src="/NameSign.png"
         alt="Hero Image"
         fill
-        objectFit="contain"
+        className="absolute object-cover top-0 left-0 w-full h-full rounded-lg"
       />
       <div className="absolute bottom-0 left-0 h-16 w-16 ml-5 mb-5">
         <button className="btn btn-primary mt-7 w-32">

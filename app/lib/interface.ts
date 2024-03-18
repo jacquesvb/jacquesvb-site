@@ -11,3 +11,12 @@ export interface fullBlog {
   content: any;
   titleImage: any;
 }
+
+export interface aboutMe {
+  name: string;
+  jobbieDescription: string;
+  linkedin: string;
+  github: string;
+  resume: string;
+  jobbieImage: any;
+}
