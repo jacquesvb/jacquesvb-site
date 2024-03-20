@@ -18,18 +18,18 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className="bg-blue-400 dark:bg-black ${inter.className} h-full">
-        <Providers
-          attribute="class"
-          defaultTheme="system"
-          enableSystem
-          disableTransitionOnChange
-        >
-          <Navbar />
-          <main className="max-w-2xl mx-auto">
+      <body className="bg-blue-400 dark:bg-black ${inter.className} ">
+        <div className="container max-w-2xl mx-auto">
+          <Providers
+            attribute="class"
+            defaultTheme="system"
+            enableSystem
+            disableTransitionOnChange
+          >
+            <Navbar />
             {children}
-          </main>
-        </Providers>
+          </Providers>
+        </div>
       </body>
     </html>
   );
