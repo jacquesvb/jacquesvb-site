@@ -6,15 +6,15 @@ interface NavButtonProps {
   buttonLabel: string;
 }
 
-export default function NavButton( props: NavButtonProps ) {
+export default function NavButton(props: NavButtonProps) {
   return (
-    <div className="text-center">
-      <button className="btn btn-square">
-        <Link href={props.linkUrl}>
-          {props.icon}
-        </Link>
-      </button>
-      <div className="text-black text-center font-bold">{props.buttonLabel}</div>
-    </div>
-  )
+    <Link href={props.linkUrl}>
+      <div className="text-center">
+        <button className="btn btn-square">{props.icon}</button>
+        <div className="text-black text-center font-bold">
+          {props.buttonLabel}
+        </div>
+      </div>
+    </Link>
+  );
 }
