@@ -18,8 +18,8 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className="bg-blue-400 dark:bg-black ${inter.className} ">
-        <div className="container max-w-2xl mx-auto">
+      <body className="bg-white dark:bg-black ${inter.className} ">
+        <div className="container grid-cols-6 max-w-2xl mx-auto bg-green-800 py-4 rounded-lg">
           <Providers
             attribute="class"
             defaultTheme="system"

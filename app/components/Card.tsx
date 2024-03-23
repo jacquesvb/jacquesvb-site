@@ -22,12 +22,14 @@ export default function Card(props: cardProps) {
         />
       </div>
       <div className="flex flex-col card-body p-2">
-        <div className="text-lg font-medium text-center text-ellipsis">{props.cardTitle}</div>
+        <div className="text-lg font-medium text-center text-ellipsis">
+          {props.cardTitle}
+        </div>
         <div>{props.cardDescription}</div>
         <div className="mt-auto card-actions justify-center">
-          <button className="btn btn-primary">
-            <Link href={props.buttonLink}>{props.buttonLabel}</Link>
-          </button>
+          <Link href={props.buttonLink}>
+            <button className="btn btn-primary">{props.buttonLabel}</button>
+          </Link>
         </div>
       </div>
     </div>
